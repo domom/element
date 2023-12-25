@@ -32,11 +32,11 @@
       top: $gap;
       bottom: $gap;
       left: 0;
-      background: mix(white, transparent, 50%);
+      background: color-mix(in srgb,white, transparent);
     }
 
     &.el-button--default::before {
-      background: mix($--button-default-border-color, transparent, 50%);
+      background: color-mix(in srgb,$--button-default-border-color, transparent);
     }
 
     &:hover {

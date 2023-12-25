@@ -35,8 +35,8 @@
   }
 
   &:active {
-    color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
-    border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+    color: color-mix(in srgb, $--color-black $--button-active-shade-percent, $--color-primary);
+    border-color: color-mix(in srgb, $--color-black $--button-active-shade-percent, $--color-primary);
     outline: none;
   }
 
@@ -60,15 +60,15 @@
 
     &:active {
       background: $--color-white;
-      border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
-      color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+      border-color: color-mix(in srgb, $--color-black $--button-active-shade-percent, $--color-primary);
+      color: color-mix(in srgb, $--color-black $--button-active-shade-percent, $--color-primary);
       outline: none;
     }
   }
 
   @include when(active) {
-    color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
-    border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+    color: color-mix(in srgb, $--color-black $--button-active-shade-percent, $--color-primary);
+    border-color: color-mix(in srgb, $--color-black $--button-active-shade-percent, $--color-primary);
   }
 
   @include when(disabled) {
@@ -163,12 +163,12 @@
 
     &:hover,
     &:focus {
-      color: mix($--color-white, $--color-primary, $--button-hover-tint-percent);
+      color: color-mix(in srgb, $--color-white, $--color-primary, $--button-hover-tint-percent);
       border-color: transparent;
       background-color: transparent;
     }
     &:active {
-      color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+      color: color-mix(in srgb, $--color-black $--button-active-shade-percent, $--color-primary);
       border-color: transparent;
       background-color: transparent;
     }
