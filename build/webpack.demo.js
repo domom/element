@@ -8,6 +8,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const launchEditorMiddleware = require('launch-editor-middleware');
+const CssnanoPlugin = require('cssnano-webpack-plugin');
 
 const config = require('./config');
 
@@ -77,7 +78,7 @@ const webpackConfig = {
       {
         test: /\.(scss|css)$/,
         use: [
-          isProd ? MiniCssExtractPlugin.loader : 'style-loader',
+          MiniCssExtractPlugin.loader,
           'css-loader',
           'sass-loader'
         ]
@@ -130,10 +131,17 @@ const webpackConfig = {
           preserveWhitespace: false
         }
       }
+    }),
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash:7].css'
     })
   ],
   optimization: {
-    minimizer: []
+    minimizer: [
+      new CssnanoPlugin(),
+      new OptimizeCSSAssetsPlugin({})
+    ],
+    minimize: true
   },
   devtool: '#eval-source-map'
 };
