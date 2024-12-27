@@ -2,7 +2,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',SimSun,sans-serif;
+  font-family: "LS_SYHT";
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
@@ -60,7 +60,7 @@ button, input, select, textarea {
 
 .hljs {
   line-height: 1.8;
-  font-family: Menlo, Monaco, Consolas, Courier, monospace;
+  font-family: "LS_SYHT";
   font-size: 12px;
   padding: 18px 24px;
   background-color: #fafafa;

@@ -2,6 +2,7 @@ import Vue from 'vue';
 import App from './editor/index';
 import Element from 'main/index.js';
 import 'packages/theme-chalk/src/index.scss';
+import 'packages/theme-chalk/src/common/css-var.scss';
 
 export default () => {
   Vue.use(Element, { zIndex: 100000 });
