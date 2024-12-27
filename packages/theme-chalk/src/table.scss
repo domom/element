@@ -115,6 +115,9 @@
         background: $--background-color-base;
       }
     }
+    th.el-table__cell {
+      height: $--table-header-row-height;
+    }
   }
 
   .el-table__cell {
@@ -125,6 +128,8 @@
     vertical-align: middle;
     position: relative;
     text-align: left;
+    height: $--table-body-row-height;
+    min-height: $--table-body-row-height;
 
     @include when(center) {
       text-align: center;

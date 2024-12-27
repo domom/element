@@ -22,7 +22,7 @@
   font-weight: $--button-font-weight;
   @include utils-user-select(none);
   & + & {
-    margin-left: 10px;
+    margin-left: 8px;
   }
 
   @include button-size($--button-padding-vertical, $--button-padding-horizontal, $--button-font-size, $--button-border-radius);
@@ -32,6 +32,11 @@
     color: $--color-primary;
     border-color: $--color-primary-light-7;
     background-color: $--color-primary-light-9;
+  }
+
+  &.el-button--default:hover,
+  &.el-button--default:focus {
+    color: $--color-white;
   }
 
   &:active {

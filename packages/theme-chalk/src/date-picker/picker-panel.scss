@@ -95,6 +95,17 @@
 
   @include e(link-btn) {
     vertical-align: middle;
+    &.el-button.el-button:hover {
+      border-color: $--color-success;
+      color: $--color-success;
+    }
+    &.el-button--text.el-button {
+      color: $--color-success;
+    }
+    &.el-button--text.el-button--text.el-button:hover {
+      border-color: transparent;
+      color: $--color-success-light;
+    }
   }
 }
 

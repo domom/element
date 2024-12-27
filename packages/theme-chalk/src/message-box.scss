@@ -38,7 +38,8 @@
   @include e(header) {
     position: relative;
     padding: $--msgbox-padding-primary;
-    padding-bottom: 10px;
+    // padding-bottom: 10px;
+    
   }
 
   @include e(title) {
@@ -143,11 +144,11 @@
   }
 
   @include e(btns) {
-    padding: 5px 15px 0;
+    padding: 5px 32px 0;
     text-align: right;
 
     & button:nth-child(2) {
-      margin-left: 10px;
+      margin-left: 16px;
     }
   }
 
