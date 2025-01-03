@@ -234,9 +234,14 @@
       &:focus,
       &:active {
         z-index: 1;
+        
       }
     }
-
+    &.el-button--default:hover,
+    &.el-button--default:focus,
+    &.el-button--default:active {
+      color: $--color-white;
+    }
     @include when(active) {
       z-index: 1;
     }

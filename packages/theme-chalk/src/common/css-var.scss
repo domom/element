@@ -1,73 +1,73 @@
 :root {
     /**  primary **/
-    --color-primary: #1566A3;
-    --color-primary-light-1: #e8f0f6;
-    --color-primary-light-2: #d0e0ed;
-    --color-primary-light-3: #b9d1e3;
-    --color-primary-light-4: #a1c2da;
-    --color-primary-light-5: #8ab3d1;
-    --color-primary-light-6: #73a3c8;
-    --color-primary-light-7: #5b94bf;
-    --color-primary-light-8: #4485b5;
-    --color-primary-light-9: #2c75ac;
+    --szgc-element-primary: #1566A3;
+    --szgc-element-primary-light-1: #e8f0f6;
+    --szgc-element-primary-light-2: #d0e0ed;
+    --szgc-element-primary-light-3: #b9d1e3;
+    --szgc-element-primary-light-4: #a1c2da;
+    --szgc-element-primary-light-5: #8ab3d1;
+    --szgc-element-primary-light-6: #73a3c8;
+    --szgc-element-primary-light-7: #5b94bf;
+    --szgc-element-primary-light-8: #4485b5;
+    --szgc-element-primary-light-9: #2c75ac;
     /**  white **/
-    --color-white: #ffffff;
+    --szgc-element-white-color: #ffffff;
     /**  black **/
-    --color-black: #000000;
+    --szgc-element-black-color: #000000;
     /**  success **/
-    --color-success: #52C41A;
-    --color-success-light: #97dc76;
-    --color-success-lighter: #e5f9ea;
+    --szgc-element-success-color: #52C41A;
+    --szgc-element-success-color-light: #97dc76;
+    --szgc-element-success-color-lighter: #e5f9ea;
     /**  warning **/
-    --color-warning: #FAAE13;
-    --color-warning-light: #fcce71;
-    --color-warning-lighter: #fff5eb;
+    --szgc-element-warning-color: #FAAE13;
+    --szgc-element-warning-color-light: #fcce71;
+    --szgc-element-warning-color-lighter: #fff5eb;
     /**  danger **/
-    --color-danger: #F5222D;
-    --color-danger-light: #f97a81;
-    --color-danger-lighter: #ffedec;
+    --szgc-element-danger-color: #F5222D;
+    --szgc-element-danger-color-light: #f97a81;
+    --szgc-element-danger-color-lighter: #ffedec;
     /**  info **/
-    --color-info: #BFBFBF;
-    --color-info-light: #d9d9d9;
-    --color-info-lighter: #f2f2f2;
+    --szgc-element-info-color: #BFBFBF;
+    --szgc-element-info-color-light: #d9d9d9;
+    --szgc-element-info-color-lighter: #f2f2f2;
     /**  text **/
-    --color-text-primary: #445662;
-    --color-text-regular: #525B6A;
-    --color-text-secondary: #8C959E;
-    --color-text-placeholder: #BFBFBF;
+    --szgc-element-color-text-primary: #445662;
+    --szgc-element-color-text-regular: #525B6A;
+    --szgc-element-color-text-secondary: #8C959E;
+    --szgc-element-color-text-placeholder: #BFBFBF;
     /**  border **/
-    --border-color-base: #dcdfe6;
-    --border-color-light: #e4e7ed;
-    --border-color-lighter: #ebeef5;
-    --border-color-extra-light: #f2f6fc;
+    --szgc-element-border-color--base: #dcdfe6;
+    --szgc-element-border-color--light: #e4e7ed;
+    --szgc-element-border-color--lighter: #ebeef5;
+    --szgc-element-border-color--extra-light: #f2f6fc;
     /**  Background **/
-    --background-color-base: #F7F7F7;
-    --background-color-black: #2C2C2C;
+    --szgc-element-background-color-base: #F7F7F7;
+    --szgc-element-background-color-black: #2C2C2C;
   
-    --font-color-disabled-base: #bbb;
+    --szgc-element-font-color-disabled-base: #bbb;
   
-    --icon-color: #666;
+    --szgc-element-icon-color: #666;
   
-    --checkbox-disabled-input-fill: #edf2fc;
+    --szgc-element-checkbox-disabled-input-fill: #edf2fc;
   
     --select-multiple-input-color: #666;
     --select-dropdown-empty-color: #999;
   
-    --message-background-color: #edf2fc;
+    --szgc-element-message-background-color: #edf2fc;
   
-    --cascader-tag-background: #f0f2f5;
-    --tab-border-line-color: 1px solid #e4e4e4;
-    --carousel-arrow-background: rgba(31, 45, 61, 0.11) ;
-    --carousel-arrow-hover-background: rgba(31, 45, 61, 0.23);
-    --calendar-selected-background-color: #f2f8fe;
-    --avatar-font-color: #fff;
-    --avatar-background-color: #c0c4cc;
+    --szgc-element-cascader-tag-background: #f0f2f5;
+    --szgc-element-tab-border-line-color: 1px solid #e4e4e4;
+    --szgc-element-carousel-arrow-background: rgba(31, 45, 61, 0.11) ;
+    --szgc-element-carousel-arrow-hover-background: rgba(31, 45, 61, 0.23);
+    --szgc-element-calendar-selected-background-color: #f2f8fe;
+    --szgc-element-avatar-font-color: #fff;
+    --szgc-element-avatar-background-color: #c0c4cc;
     /**  Scrollbar **/
     --scrollbar-background-color: rgba(144, 147, 153, 0.3);
     --scrollbar-hover-background-color: rgba(144, 147, 153, 0.5);
     /**  Slider **/
-    --slider-button-hover-color:#14639e;
+    --szgc-element-slider-button-hover-color:#14639e;
     /**  Table **/
-    --table-header-background-color: #f2f9fb;
-    --table-row-hover-background-color: #e1ebf6;
+    --szgc-element-table-header-background-color: #f2f9fb;
+    --szgc-element-table-row-hover-background-color: #e1ebf6;
   }
