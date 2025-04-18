@@ -27,7 +27,7 @@
 // Cross module loader
 // Supported: Node, AMD, Browser globals
 //
-;(function (root, factory) {
+;(function (root, factory) {    
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
         define(factory);
@@ -234,7 +234,6 @@
 
         // get boundaries
         data.boundaries = this._getBoundaries(data, this._options.boundariesPadding, this._options.boundariesElement);
-
         data = this.runModifiers(data, this._options.modifiers);
 
         if (typeof this.state.updateCallback === 'function') {
@@ -375,7 +374,6 @@
      */
     Popper.prototype._getPosition = function(popper, reference) {
         var container = getOffsetParent(reference);
-
         if (this._options.forceAbsolute) {
             return 'absolute';
         }
@@ -1161,7 +1159,23 @@
      * @param {HTMLElement} element
      * @return {Object} client rect
      */
-    function getBoundingClientRect(element) {
+    function getBoundingClientRect(element,fixed) {
+        // 修复在wujie中fixed定位偏移的问题
+        if(root.$wujie && root.$wujie.shadowRoot && root.$wujie.shadowRoot.host && element === document.documentElement && fixed ) {
+            var rect =  root.$wujie.shadowRoot.host.ownerDocument.documentElement.getBoundingClientRect();
+            var rectTop = isIE && element.tagName === 'HTML'
+            ? -element.scrollTop
+            : rect.top;
+            return {
+                left: rect.left,
+                top: rectTop,
+                right: rect.right,
+                bottom: rect.bottom,
+                width: rect.right - rect.left,
+                height: rect.bottom - rectTop
+            }
+        }
+        
         var rect = element.getBoundingClientRect();
 
         // whether the IE version is lower than 11
@@ -1191,9 +1205,8 @@
      * @return {Object} rect
      */
     function getOffsetRectRelativeToCustomParent(element, parent, fixed) {
-        var elementRect = getBoundingClientRect(element);
-        var parentRect = getBoundingClientRect(parent);
-
+        var elementRect = getBoundingClientRect(element,fixed);
+        var parentRect = getBoundingClientRect(parent,fixed);
         if (fixed) {
             var scrollParent = getScrollParent(parent);
             parentRect.top += scrollParent.scrollTop;

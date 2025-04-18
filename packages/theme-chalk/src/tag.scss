@@ -54,6 +54,10 @@
     }
   }
 
+  &.el-tag--dark {
+    color: $--color-white;
+  }
+
   &.el-tag--warning {
     background-color: color-mix(in srgb,$--tag-warning-color #{$backgroundColorWeight}, $--color-white);
     border-color: color-mix(in srgb,$--tag-warning-color #{$borderColorWeight}, $--color-white);
